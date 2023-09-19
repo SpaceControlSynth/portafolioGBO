@@ -1,0 +1,263 @@
+body {
+    background-image: url('https://wallpaperaccess.com/full/4396917.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 0px;
+}
+
+
+/* Estilos para el contenedor del loader */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Fondo negro para resaltar */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
+/* Estilos para la imagen del loader */
+.loader-container img {
+    width: 80px; /* Ancho deseado */
+    height: 80px; /* Altura deseada */
+    animation: change-shape 3s linear infinite, hide-loader 3s 1 forwards;
+}
+
+/* Animación para cambiar de forma */
+@keyframes change-shape {
+    0% {
+        border-radius: 20%; /* Cuadrado */
+    }
+    25% {
+        border-radius: 90%; /* Círculo */
+    }
+    50% {
+        border-radius: 15%; /* Cuadrado */
+    }
+    75% {
+        border-radius: 95%; /* Cuadrado con esquinas redondeadas */
+    }
+    100% {
+        border-radius: -50%; /* Cuadrado */
+    }
+}
+
+/* Animación para ocultar el loader */
+@keyframes hide-loader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/*barra de navegacion*/
+.navbar.bg-body-barraNavegacion {
+    background-color: #3f0446;
+    z-index: 0;
+}
+/*IMAGEN LOGO SYNTHCODE*/
+.intro-logo {
+    text-align: center;
+    padding: 60px;}
+
+.intro-logo img {
+    height: auto;
+    width: 350px;
+    border-radius: 20%; /* Restablece los bordes a 0% para que no haya bordes redondeados al pasar el mouse */
+    transition: transform 0.5s ease; /* Agrega una transición de transformación suave */
+
+    }
+.intro-logo img:hover {
+    transform: rotate(360deg)scale(1.1); /* Gira la imagen 360 grados */
+    background: linear-gradient(to bottom, #8c0277, #3fef80); /* Agrega un degradado al fondo */
+    box-shadow: 0 0 20px 5px rgba(99, 5, 125, 0.8); /* Sombra blanca con luminosidad */
+}
+
+/* Estilos personalizados para la sección "services" */
+#services {
+    padding: 70px; /* Agrega relleno (padding) para ajustar el tamaño verticalmente */
+    margin-top: 50px; /* Margen superior para ajustar la ubicación verticalmente */
+
+} 
+/*tituto de la pagina home*/
+.title h1 {
+    font-size: 36px; /* Tamaño del texto */
+    color: #00f3ff; /* Color de neón (azul cian) */
+    text-align: center;
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    text-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff, 0 0 30px #00f3ff; /* Efecto de sombra de neón */
+}
+/*tamaño y color de fuentes h3 y p*/
+.titulodescripcion {
+    font-family: 'Comfortaa', cursive;
+    color: #3fef80;
+    font-size: 30px;
+}
+/*tamaño y color de parrafos*/
+.parrafo {
+    color: #8c0277;
+    font-size: 20px;
+}
+.Reproductores {
+    position: center;
+    box-shadow: 0 0 20px 5px rgba(99, 5, 125, 0.8);
+}
+
+/* Estilos para las imágenes  de los servicios*/
+.item-servicio img {
+    max-width: 90%;
+    height: auto;
+    transition: transform 0.3s ease;/* Transiciones suaves */
+    box-shadow: 0 0 20px 5px rgba(99, 5, 125, 0.8); /* Sombra blanca con luminosidad */
+}
+
+/* Efecto de zoom al pasar el mouse por encima */
+.item-servicio img:hover {
+    transform: scale(1.1); /* Zoom al 110% del tamaño original */
+    
+}
+
+/*botones neon*/
+a:hover {
+    background: #3df2ce;
+    color: #050801;
+    box-shadow: 
+            0 0 5px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 200px #03e9f4,
+}
+
+
+
+
+
+.matrix-container {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    bottom:0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Las letras no afectan la interacción del usuario */
+    background:transparent ; /* Fondo negro */
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+    opacity: 0.7; /* Opacidad para que el fondo sea visible pero no demasiado dominante */
+}
+  /* Estilos para las letras */
+.matrix-letter {
+    position: absolute;
+    color: #00ff00; /* Color inicial (verde manzana) */
+    font-size: 16px;
+    animation: fall 6s linear infinite;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Estilos para los botones  del footer*/
+.footer-buttons {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.button {
+    display: inline-block;
+    padding: 20px 90px;
+    border: 4px solid white; /* Marco blanco */
+    background-color: transparent; /* Fondo transparente */
+    color: white;
+    text-decoration: none;
+    transition: box-shadow 0.2s; /* Transición para el efecto de sombra */
+}
+
+.button:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* Sombra blanca con luminosidad */
+}
+
+/* Estilos para el botón futurista dentro del acordion CV */
+.futuristic-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, #9c27b0, #00ff00); /* Degradado de morado a verde neón */
+    color: #fff; /* Color de texto blanco */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.futuristic-button:hover {
+    background: linear-gradient(to bottom, #00ff00, #9c27b0); /* Degradado inverso al pasar el mouse */
+}
+
+/*botones de contacto*/
+/* Estilos para la sección de botones de contacto */
+.Iconos-contacto {
+    text-align: center; /* Centra los botones */
+    padding: 20px; /* Espaciado interno */
+    background-color: #000; /* Fondo negro */
+}
+
+/* Estilos para los botones de contacto */
+.contact-buttons {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los botones */
+    gap: 20px; /* Espaciado entre botones */
+}
+
+.contact-button {
+    display: flex;
+    flex-direction: column; /* Alinea la imagen y el texto verticalmente */
+    align-items: center; /* Centra la imagen y el texto horizontalmente */
+    text-decoration: none; /* Elimina la decoración de enlace */
+    color: #00ff00; /* Color de texto verde neon */
+}
+
+.contact-button img {
+    max-width: 50px; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Estilos para el efecto al pasar el mouse */
+.contact-button:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+
+.contact-button::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px; /* Altura de la línea de color verde neon */
+    background-color: #00ff00; /* Color de la línea */
+    margin-top: 5px; /* Espaciado superior de la línea */
+}
+
+/*fuente de titulos*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dosis:wght@300;400;500;600;700&family=Fugaz+One&family=Handjet:wght@100&display=swap');
+
+
+
+
+ /* Media query para hacer la página responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,111 @@
+/* Estilos para el fondo negro */
+body {
+    background-color: #0a0a0a;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.matrix-container {
+    position: fixed;
+    top: 400px;
+    left: 0;
+    bottom:500px;
+    width: 100%;
+    height: 10%;
+    pointer-events: none; /* Las letras no afectan la interacción del usuario */
+
+}
+  /* Estilos para las letras */
+.matrix-letter {
+    position: absolute;
+    color: #00ff00; /* Color inicial (verde manzana) */
+    font-size: 16px;
+    animation: fall 3s linear infinite;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Estilos para la imagen */
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+#neon-image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    opacity: 0; /* La imagen comienza invisible */
+    transition: opacity 2s ease; /* Efecto de aparición lenta */
+}
+
+/* Estilos para el cursor con efecto de estela de neon */
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #480341 20%, transparent 100%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+}
+
+
+/* Estilos para la barra de carga */
+.loader {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Altura de la barra de carga */
+    background: rgba(0, 255, 0, 0.5); /* Color verde neon con opacidad */
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: #740567; /* Color verde neon */
+    animation: moveProgressBar 15s infinite; /* Animación infinita de la barra de carga */
+}
+
+@keyframes moveProgressBar {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+/* Estilos para la capa de fondo */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    opacity: 0; /* Inicialmente transparente */
+    pointer-events: none; /* Evita interacciones con la capa de fondo */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+    z-index: 1; /* Coloca la capa encima de todo */
+}
+
+/* Estilos para aplicar el degradado al hacer clic en la imagen */
+.image-clicked .overlay {
+    opacity: 1; /* Hacer la capa de fondo visible al hacer clic */
+}
